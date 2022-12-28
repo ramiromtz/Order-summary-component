@@ -1,0 +1,142 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* variables */
+:root {
+    /* primary colors */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    /* Neutral colors */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/pattern-background-desktop.svg), var(--pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.card-header img {
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.card-body h1 {
+    margin-top: 1.5rem;
+    color: var(--dark-blue);
+    font-weight: 900;
+    text-align: center;
+}
+
+.card-body .info {
+    text-align: center;
+    color: var(--desaturated-blue);
+    font-size: 16px;
+    padding: 0 35px;
+}
+
+.adicional-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adicional-info img {
+    margin-right: 20px;
+}
+
+.adicional-info .price {
+    margin-right: 50px;
+}
+
+.price p:first-child {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.price p:last-child {
+    color: var(--desaturated-blue)
+}
+
+.adicional-info a {
+    color: var(--bright-blue);
+    font-weight: 700;
+}
+
+.card-body button {
+    width: 80%;
+    padding: 10px 0;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    background-color: var(--bright-blue);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card-body .btn-cancel {
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    font-weight: 900;
+}
+
+@media (max-width: 375px) {
+    body {
+        background: url(images/pattern-background-desktop.svg), var(--pale-blue);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .card {
+        max-width: 90%;
+        border-radius: 25px;
+    }
+
+    .card-body h1 {
+        font-size: 22px;
+    }
+
+    .card-body .info {
+        padding: 0 45px;
+        margin-bottom: 20px;
+    }
+
+    .adicional-info {
+        padding-bottom: 20px;
+    }
+
+    .card-body button {
+        padding: 15px 0;
+        font-size: 15px;
+    }
+}
